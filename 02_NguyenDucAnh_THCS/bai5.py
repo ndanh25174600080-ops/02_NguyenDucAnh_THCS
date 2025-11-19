@@ -1,11 +1,25 @@
-# Nhập số tiền gửi ban đầu và và lãi xuất hàng năm từ bàn phím
-so_tien_gui_ban_dau = float(input("Nhap so tien hui ban dau: "))
-lai_xuat_hang_nam = float(input("Nhap lai xuat hang nam: "))
-# Tính số tiền lãi nhận được sau 1 tháng , 2 quý , 3 năm (lãi đơn)
-tien_lai_sau_1_thang = so_tien_gui_ban_dau * lai_xuat_hang_nam * (1/12)
-tien_lai_sau_2_quy = so_tien_gui_ban_dau * lai_xuat_hang_nam * (6/12)
-tien_lai_sau_3_nam_laidon = so_tien_gui_ban_dau * lai_xuat_hang_nam * 3
-# In ra kết quả số tiền lãi nhận được sau 1 tháng , 2 quý , 3 năm (lãi đơn)
-print(f"So tien lai sau 1 thang: {tien_lai_sau_1_thang} VND")
-print(f"So tien lai sau 2 quy: {tien_lai_sau_2_quy} VND")
-print(f"So tien lai sau 3 nam: {tien_lai_sau_3_nam_laidon} VND")
+# Nhập n
+n = int(input("Nhập n: "))
+# tính  S1
+S1 = 0
+for i in range(1, n + 1):
+    S1 += i
+# Tính S2
+S2 = 1
+for i in range(1, n):
+    S2 *= i
+# Tính S3
+S3 = 0
+for i in range(1, n + 1):
+    # (-1)**(i+1) tạo ra +, -, +, -
+    S3 += ((-1)**(i+1)) * (1 / i)
+# Tính S4
+S4 = 0
+for k in range(0, n + 1):
+    S4 += k / (k + 2)
+# In kết quả tính S1  S2, S3, S4
+print("S1 =", S1)
+print("S2 =", S2)
+print("S3 =", S3)
+print("S4 =", S4)
+

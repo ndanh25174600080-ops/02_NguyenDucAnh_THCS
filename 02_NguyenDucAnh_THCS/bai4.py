@@ -1,8 +1,15 @@
-# Nhập số tiền bằng VND 
-tien_bang_vnd = float(input("Nhap so tien bang vnd :"))
-# Tỷ giá
-ty_gia = 24500
-# Chuyển sang tiền bằng USD
-tien_bang_usd = tien_bang_vnd / ty_gia
-# in ra kết quả số tiền bằng USD
-print(f"Tien USD : {tien_bang_usd :.2f}")
+# Nhập n
+n = int(input("Nhập n: "))
+# in ra màn hình các số nguyên tố nhỏ hơn
+print("Các số nguyên tố nhỏ hơn", n, "là:")
+# kiểm tra điều kiện, duyệt các số nguyên tố và in ra màn hình
+for num in range(2, n):
+    is_prime = True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num, end=" ")
+
+
